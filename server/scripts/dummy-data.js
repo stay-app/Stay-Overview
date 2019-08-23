@@ -2,18 +2,24 @@ var faker = require('faker');
 var loremHipsum = require('lorem-hipsum');
 
 //category generator
-var category = () => {
-  var options = ['WELLNESS CLASS', 'HISTORY WALK', 'FOOD WALK', 'BAR CRAWL', 'COOKING CLASS', 'PHOTO SHOOT', 'WORKSHOP', 'BURLESQUE'];
+var getCategory = () => {
+  var options = ['WELLNESS CLASS', 'HISTORY WALK', 'FOOD WALK', 'BAR CRAWL', 'COOKING CLASS', 'PHOTO SHOOT', 'WORKSHOP', 'OUTDOOR SPORTS'];
   return options[Math.floor(Math.random()*8)]
 }
 
 //star generator
 var getStars = () => {
-  var num = Math.random()*5;
+  var num = Math.random() * 5;
   if (num < 1) {
     return null;
   }
   return num.toFixed(2);
+}
+
+//random image generator
+var getImage = () => {
+  var imgNum = Math.ceil(Math.random() * 100);
+  return `https://nearby.s3-us-west-1.amazonaws.com/${imgNum}.jpg`
 }
 
 //for each of 100 listings, push to nearby the result 20 times.
@@ -28,11 +34,11 @@ var createData = () => {
       listing.nearby.push(
         {
           nearId: j,
-          cat: category(),
+          cat: getCategory(),
           desc: loremHipsum({  sentenceLowerBound: 2, sentenceUpperBound: 5 }),
           price: Math.floor(faker.finance.amount()),
           star: getStars(),
-          url: faker.image.imageUrl()
+          url: getImage()
         })
     }
     fullList.push(listing)
@@ -41,4 +47,4 @@ var createData = () => {
 }
 
 
-exports.createData = createData();
+module.exports.createData = createData();
