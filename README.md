@@ -1,2 +1,1 @@
-# Stay-Overview
-Overview module for the Stay app.
+# Stay Thing to do nearby Module
