@@ -27,10 +27,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
-	entry: './client/index.jsx.js',
+	entry: './client/index.jsx',
 
 	output: {
-		filename: '[name].[chunkhash].js',
+		filename: 'index.js',
 		path: path.resolve(__dirname, 'public')
 	},
 	module: {
