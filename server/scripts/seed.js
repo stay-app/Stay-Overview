@@ -32,7 +32,7 @@ var setSeed = () => {
   })))
 }
 
-setSeed();
+// setSeed();
 
 exports.schema = listingSchema;
 exports.listing = Listing;

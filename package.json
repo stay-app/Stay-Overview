@@ -1,11 +1,31 @@
 {
   "version": "1.0.0",
-  "description": "My webpack project",
+  "description": "Stay-Nearby",
+  "jest": {
+    "moduleNameMapper": {
+      "modulePaths": [
+        "/node_modules"
+      ],
+      "moduleFileExtensions": [
+        "js",
+        "jsx"
+      ],
+      "moduleDirectories": [
+        "node_modules",
+        "bower_components",
+        "shared"
+      ],
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+      "^react(.*)$": "<rootDir>/node_modules/react$1",
+      "^config$": "<rootDir>/configs/app-config.js"
+    }
+  },
   "scripts": {
     "seed": "node ./server/scripts/seed.js",
     "build": "webpack --watch",
     "start": "nodemon ./server/server.js",
-    "test": "jest"
+    "test": "jest spec/index.test.js --watchAll"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -34,6 +54,7 @@
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "faker": "^4.1.0"
   }
 }
