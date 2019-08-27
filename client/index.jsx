@@ -15,8 +15,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <p>HELLO WORLD</p>
+      <div id="title">
+        <p>Things to do nearby</p>
         <Carousel info={this.state.nearby} />
       </div>
     )

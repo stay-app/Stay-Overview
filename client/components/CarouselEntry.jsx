@@ -1,16 +1,20 @@
 import React from 'react'
 
 var carouselEntry = (props) => {
+  if (props.info.star !== null)
+  props.info.star += (`  ★`);
   return(
-    <div id="full-item">
-      <div id="caro-img-box">
-        <img src={props.info.url} id="caro-img" />
+    <span id={props.info.nearId}>
+      <div id="full-item">
+        <div id="caro-img-box">
+          <img src={props.info.url} id="caro-img" />
+        </div>
+        <div id="caro-cat">{props.info.cat}</div>
+        <div id="caro-name">{props.info.desc}</div>
+        <div id="caro-price">From ${props.info.price}/person</div>
+        <div id="caro-star">{props.info.star}</div>
       </div>
-      <div id="caro-cat">{props.info.cat}</div>
-      <div id="caro-name">{props.info.desc}</div>
-      <div id="caro-price">From ${props.info.price}/person</div>
-      <div id="caro-star">{props.info.star} ★</div>
-    </div>
+    </span>
   )
 }
 
