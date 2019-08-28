@@ -20,12 +20,11 @@ class Carousel extends React.Component {
           showing: liveDisplay
         })
       }
-      console.log('sad news')
     }
 
   render() {
     if (this.state.showing.length === 0) {
-      this.handleInfo();
+      // this.handleInfo();
     }
       return(
         <div id="carousel-box">

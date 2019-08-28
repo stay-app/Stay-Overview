@@ -30,7 +30,7 @@ module.exports = {
 	entry: './client/index.jsx',
 
 	output: {
-		filename: 'index.js',
+		filename: 'bundle.js',
 		path: path.resolve(__dirname, 'public')
 	},
 	module: {
