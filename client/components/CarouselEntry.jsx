@@ -1,8 +1,10 @@
 import React from 'react'
 
+
 var carouselEntry = (props) => {
-  if (props.info.star !== null)
-  props.info.star += (`  ★`);
+  var star = props.info.star
+  if (star !== null)
+    star += (`  ★`);
   return(
     <span id={props.info.nearId}>
       <div id="full-item">
@@ -12,7 +14,7 @@ var carouselEntry = (props) => {
         <div id="caro-cat">{props.info.cat}</div>
         <div id="caro-name">{props.info.desc}</div>
         <div id="caro-price">From ${props.info.price}/person</div>
-        <div id="caro-star">{props.info.star}</div>
+        <div id="caro-star">{star}</div>
       </div>
     </span>
   )

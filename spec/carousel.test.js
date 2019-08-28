@@ -14,18 +14,24 @@ test('Showing state iniliatizes as an empty array', () => {
   expect(instance.state.showing).toStrictEqual([]);
 })
 
-xtest('Showing state updates when handInfo is called', () => {
-  const wrapper = create(<Carousel />);
+test('Showing state updates when handInfo is called', () => {
+  const mockInfo = [ { nearId: 1}, { nearId: 2}, { nearId: 3}, { nearId: 4}, { nearId: 5}, { nearId: 6}]
+  const wrapper = create(<Carousel info={mockInfo} />);
   const instance = wrapper.getInstance();
-  expect(instance.state.showing).toStrictEqual([]);
   instance.handleInfo();
   expect(instance.state.showing).not.toStrictEqual([]);
 })
 
-test('displayCounter starts at 6', () => {
+test('displayLast starts at 6', () => {
   const wrapper = create(<Carousel />);
   const instance = wrapper.getInstance();
-  expect(instance.displayCounter).toEqual(6);
+  expect(instance.displayLast).toEqual(6);
+})
+
+test('displayFirst starts at 0', () => {
+  const wrapper = create(<Carousel />);
+  const instance = wrapper.getInstance();
+  expect(instance.displayFirst).toEqual(0);
 })
 
 test('Carousel has props', () => {
