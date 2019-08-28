@@ -4,10 +4,10 @@ import React from 'react'
 var carouselEntry = (props) => {
   var star = props.info.star
   if (star !== null)
-    star += (`  ★`);
+    star += (` ★`);
   return(
-    <span id={props.info.nearId}>
-      <div id="full-item">
+    <span className="slide" id={props.info.nearId}>
+      <div className="full-item">
         <div id="caro-img-box">
           <img src={props.info.url} id="caro-img" />
         </div>

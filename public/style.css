@@ -22,6 +22,7 @@ img {
   height: 420px;
   box-sizing: border-box;
   display: flex;
+  overflow-x: auto;
   align-items: stretch;
 }
 
@@ -30,13 +31,27 @@ img {
   align-items: center;
 }
 
+.caro-prev-white, .caro-next-white {
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  width: auto;
+  height: auto;
+  margin-bottom: 180px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 27px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
 .caro-prev, .caro-next {
   align-items: center;
   font-family: 'Courier New', Courier, monospace;
   cursor: pointer;
   width: auto;
   height: auto;
-  margin-top: -22px;
+  margin-bottom: 180px;
   padding: 16px;
   color: gray;
   font-weight: bold;
@@ -44,6 +59,13 @@ img {
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
+
+/* fill: rgb(72, 72, 72);
+    fill-opacity: 0.5;
+    stroke: rgb(255, 255, 255);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round; */
 
 .caro-next {
   right: 0;
@@ -55,12 +77,20 @@ img {
   width: 193.59px;
   height: 258.11px;
   padding-bottom: 12px;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
 }
 
-#full-item {
+.full-item {
+  flex-shrink: 0;
+  height: 100%;
   width: 170px;
   padding-left: 8px;
   scroll-padding-right: 8px;
+}
+
+.full-item > div {
+  scroll-snap-align: start;
 }
 
 #caro-img {
