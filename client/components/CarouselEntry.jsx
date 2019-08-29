@@ -1,11 +1,12 @@
 import React from 'react'
 
 
-var carouselEntry = (props) => {
-  var star = props.info.star
-  if (star !== null)
+const carouselEntry = (props) => {
+  let {star} = props.info
+  if (star !== null) {
     star += (` ★`);
-  return(
+  }
+  return (
     <span className="slide" id={props.info.nearId}>
       <div className="full-item">
         <div id="caro-img-box">

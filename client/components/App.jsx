@@ -1,15 +1,29 @@
 import React from 'react';
 import axios from 'axios';
-import Carousel from './Carousel.jsx'
+import Carousel from './Carousel.jsx';
+import styles from '../../public/style.module.css';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      nearby: []
-    }
+      nearby: [],
+    };
 
+  }
+
+  componentDidMount() {
+    const that = this;
+    axios.get('/api/nearby/?id=2')
+      .then((response) => {
+        that.setState({
+          nearby: response.data[0].nearby,
+        });
+      })
+      .catch((error) => {
+        console.log(error); // comment this out when running tests
+      });
   }
 
   render() {
@@ -20,19 +34,7 @@ class App extends React.Component {
         </div>
         <Carousel info={this.state.nearby} />
       </div>
-    )
-  }
-  componentDidMount() {
-    var that = this
-    axios.get('/api/nearby/?id=2')
-  .then(function (response) {
-    that.setState({
-      nearby: response.data[0].nearby
-    })
-  })
-  .catch(function (error) {
-    console.log(error); //comment this out when running tests
-  })
+    );
   }
 }
 
