@@ -15,10 +15,10 @@ xtest('Carousel Entry has all the data fields', () => {
   expect(field1).toBeTruthy();
 })
 
-test('Carousel Entry adds a star to values that aren\'t null', () => {
+test('Carousel Entry does not manipulate props.', () => {
   const mockEntry = { star: 6}
   const wrapper = shallow(<CarouselEntry info={mockEntry} />);
-  expect(mockEntry).toEqual({ star: `6  ★`});
+  expect(mockEntry).toEqual({ star: 6});
 })
 
 test('Carousel Entry does not add stars to null', () => {

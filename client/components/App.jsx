@@ -31,7 +31,7 @@ class App extends React.Component {
     })
   })
   .catch(function (error) {
-    console.log(error);
+    console.log(error); //comment this out when running tests
   })
   }
 }

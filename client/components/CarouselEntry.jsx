@@ -10,6 +10,7 @@ var carouselEntry = (props) => {
       <div className="full-item">
         <div id="caro-img-box">
           <img src={props.info.url} id="caro-img" />
+          <a id="fav-button" >&#10084;</a>
         </div>
         <div id="caro-cat">{props.info.cat}</div>
         <div id="caro-name">{props.info.desc}</div>

@@ -65,7 +65,7 @@ class Carousel extends React.Component {
 
   render() {
     if (this.state.showing.length === 0) {
-      this.handleInfo();
+      // this.handleInfo();
     }
       return(
         <div id="arrow-box">
