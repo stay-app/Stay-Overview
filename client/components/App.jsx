@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import  { Breakpoint, BreakpointProvider } from 'react-socks';
 import Carousel from './Carousel.jsx';
 import styles from '../../public/style.module.css';
 
