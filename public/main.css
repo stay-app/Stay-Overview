@@ -9,7 +9,7 @@ img {
   margin: auto;
 }
 
-#title {
+.title {
   margin-bottom: 24px;
   margin-left: 55px;
   color: rgb(72, 72, 72);
