@@ -2,10 +2,16 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
-/*margin on carousel top and bottom 40px*/
+
+#app {
+  display: flex;
+  max-width: 930px;
+  margin: auto;
+}
 
 #title {
   margin-bottom: 24px;
+  margin-left: 55px;
   color: rgb(72, 72, 72);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
   font-size: 24px !important;
@@ -14,13 +20,59 @@ img {
 
 #carousel-box {
   height: 420px;
+  width: 890px;
   box-sizing: border-box;
   display: flex;
+  overflow-x: hidden;
   align-items: stretch;
+  scroll-behavior: smooth;
 }
 
-span {
-  box-sizing: border-box;
+#arrow-box {
+  display: flex;
+  align-items: center;
+}
+
+.caro-prev-white, .caro-next-white {
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  width: auto;
+  height: auto;
+  margin-bottom: 180px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 27px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.caro-prev, .caro-next {
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  margin-bottom: 180px;
+  padding: 16px;
+  color: gray;
+  font-weight: bold;
+  font-size: 27px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  text-decoration:none;
+}
+
+/* fill: rgb(72, 72, 72);
+    fill-opacity: 0.5;
+    stroke: rgb(255, 255, 255);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round; */
+
+.caro-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 #caro-img-box {
@@ -28,12 +80,34 @@ span {
   width: 193.59px;
   height: 258.11px;
   padding-bottom: 12px;
+  position: relative;
+  display: inline-block;
 }
 
-#full-item {
+#fav-button {
+  cursor: pointer;
+  position: absolute;
+  bottom: 218px;
+  left: 125px;
+  color: rgba(72, 72, 72, .5);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  stroke-width: 2;
+  font-size: 25px;
+}
+
+.full-item {
+  cursor: pointer;
+  flex-shrink: 0;
+  height: 100%;
   width: 170px;
   padding-left: 8px;
   scroll-padding-right: 8px;
+}
+
+.full-item > div {
+  scroll-snap-align: start;
+  transition-timing-function: ease-out;
 }
 
 #caro-img {

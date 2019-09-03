@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 1128;
+const port = 1129;
 const mongoose = require('mongoose');
 const seed = require('./scripts/seed')
 mongoose.connect('mongodb://localhost/nearby');

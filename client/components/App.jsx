@@ -14,8 +14,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id="title">
-        <p>Things to do nearby</p>
+      <div>
+        <div id="title">
+          <p>Things to do nearby</p>
+        </div>
         <Carousel info={this.state.nearby} />
       </div>
     )
@@ -29,7 +31,7 @@ class App extends React.Component {
     })
   })
   .catch(function (error) {
-    console.log(error);
+    console.log(error); //comment this out when running tests
   })
   }
 }
