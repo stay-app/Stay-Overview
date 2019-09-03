@@ -24,6 +24,7 @@ img {
   overflow-x: hidden;
   align-items: stretch;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 #arrow-box {
@@ -90,11 +91,7 @@ img {
   width: 170px;
   padding-left: 8px;
   scroll-padding-right: 8px;
-}
-
-.full-item > div {
   scroll-snap-align: start;
-  transition-timing-function: ease-out;
 }
 
 #caro-img {
