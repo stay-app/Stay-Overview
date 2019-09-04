@@ -27,9 +27,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './client/index.jsx',
+  entry: './client/components/app.jsx',
 
   output: {
+    library: 'Nearby',
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
   },

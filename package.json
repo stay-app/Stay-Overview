@@ -25,7 +25,7 @@
     }
   },
   "scripts": {
-    "seed": "node ./server/scripts/seed.js",
+    "seed": "node ./server/scripts/justSeed.js",
     "build": "webpack --watch",
     "start": "nodemon ./server/server.js",
     "test": "jest --coverage"
