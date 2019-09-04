@@ -35,6 +35,6 @@ const setSeed = () => {
 };
 
 // setSeed();
-
+exports.setSeed = setSeed;
 exports.schema = listingSchema;
 exports.listing = Listing;

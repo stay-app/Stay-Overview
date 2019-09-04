@@ -4,7 +4,7 @@ import  { Breakpoint, BreakpointProvider } from 'react-socks';
 import Carousel from './Carousel.jsx';
 import styles from '../../public/style.module.css';
 
-class App extends React.Component {
+class Nearby extends React.Component {
   constructor(props) {
     super(props);
 
@@ -39,4 +39,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Nearby;
