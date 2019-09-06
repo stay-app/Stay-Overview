@@ -30,6 +30,7 @@ const setSeed = () => {
       Listing.insertMany(allRecord, ((err, docs) => {
         if (err) console.log('Save failed');
         console.log('inserted');
+        mongoose.disconnect();
       })),
     );
 };
