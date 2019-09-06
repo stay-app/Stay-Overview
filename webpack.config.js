@@ -27,7 +27,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './client/components/app.jsx',
+  entry: './client/index.jsx',
 
   output: {
     library: 'Nearby',

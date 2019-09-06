@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Nearby from './components/App.jsx'
+import Near from './components/App.jsx'
 
-ReactDOM.render(<Nearby />, document.getElementById('nearby'));
+ReactDOM.render(<Near />, document.getElementById('nearby'));

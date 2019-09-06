@@ -4,7 +4,7 @@ import  { Breakpoint, BreakpointProvider } from 'react-socks';
 import Carousel from './Carousel.jsx';
 import styles from '../../public/style.module.css';
 
-class Nearby extends React.Component {
+class Near extends React.Component {
   constructor(props) {
     super(props);
 
@@ -16,7 +16,7 @@ class Nearby extends React.Component {
 
   componentDidMount() {
     const that = this;
-    axios.get('/api/nearby/?id=2')
+    axios.get('/api/nearby/2')
       .then((response) => {
         that.setState({
           nearby: response.data[0].nearby,
@@ -39,4 +39,5 @@ class Nearby extends React.Component {
   }
 }
 
-export default Nearby;
+
+export default Near;
