@@ -3,7 +3,10 @@ const app = express();
 const port = 5004;
 const mongoose = require('mongoose');
 const seed = require('./scripts/seed')
-mongoose.connect('mongodb://database/nearby');
+
+var mongoUrl = 'mongodb://database/nearby';
+
+mongoose.connect(mongoUrl, {server: {reconnectTries: Number.MAX_VALUE}})
 
 
 app.use(express.static('public'))
@@ -15,6 +18,5 @@ app.get('/api/nearby/:id', (req, res) => {
     res.send(record);
   });
 })
-
 
 app.listen(port, ()=> console.log(`listening on port ${port}!`))
