@@ -3,6 +3,9 @@ const app = express();
 const port = 5004;
 const mongoose = require('mongoose');
 const seed = require('./scripts/seed')
+var cors = require('cors');
+app.use(cors());
+
 
 var mongoUrl = 'mongodb://database/nearby';
 

@@ -58,16 +58,17 @@
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
-    "nodemon": "^1.19.1",
+    "axios": "^0.19.0",
+    "babel-plugin-react-css-modules": "^5.2.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
     "lorem-hipsum": "^0.1.7",
     "mongoose": "^5.6.10",
+    "nodemon": "^1.19.1",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "axios": "^0.19.0",
-    "express": "^4.17.1",
-    "babel-plugin-react-css-modules": "^5.2.6",
-    "faker": "^4.1.0",
     "react-css-modules": "^4.7.11",
+    "react-dom": "^16.9.0",
     "react-socks": "^2.0.2"
   }
 }
