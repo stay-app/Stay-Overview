@@ -16,7 +16,7 @@ class Near extends React.Component {
 
   componentDidMount() {
     const that = this;
-    axios.get('/api/nearby/2')
+    axios.get('http://ec2-54-153-38-107.us-west-1.compute.amazonaws.com:5004/api/nearby/2')
       .then((response) => {
         that.setState({
           nearby: response.data[0].nearby,
