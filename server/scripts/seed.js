@@ -36,7 +36,9 @@ const setSeed = () => {
     );
 };
 
-setSeed();
+// setSeed();
+// run: docker exec -it <nearby_container> npm run seed 
+// to seed through docker
 exports.setSeed = setSeed;
 exports.schema = listingSchema;
 exports.listing = Listing;
