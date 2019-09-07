@@ -3,8 +3,9 @@ const app = express();
 const port = 1128;
 const mongoose = require('mongoose');
 const seed = require('./dummy-data.js');
+var mongoUrl2 = 'mongodb://database/nearby'
 
-mongoose.connect('mongodb://localhost/nearby');
+mongoose.connect(mongoUrl2, {useNewUrlParser: true});
 
 const listingSchema = mongoose.Schema({
   listId: Number,
@@ -35,7 +36,7 @@ const setSeed = () => {
     );
 };
 
-// setSeed();
+setSeed();
 exports.setSeed = setSeed;
 exports.schema = listingSchema;
 exports.listing = Listing;

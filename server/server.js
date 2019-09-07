@@ -6,9 +6,9 @@ const seed = require('./scripts/seed')
 
 var mongoUrl = 'mongodb://database/nearby';
 
-mongoose.connect(mongoUrl, {server: {reconnectTries: Number.MAX_VALUE}})
+mongoose.connect(mongoUrl, {useNewUrlParser: true});
 
-
+console.log(mongoUrl);
 app.use(express.static('public'))
 
 app.get('/api/nearby/:id', (req, res) => {
